@@ -13,11 +13,19 @@ function App() {
         {id: 4, text: 'Przejść wiedźmina', date: '2022-05-11', important: true, active: true, finishDate: null},
     ])
 
+    const deleteTask = (id) => {
+        console.log('Delete in App components')
+    }
+
+    const doneTask = (id) => {
+        console.log('Done task App components')
+    }
+
     return (
         <div className="App">
             Todo App
             <AddTask/>
-            <TaskList tasks={state}/>
+            <TaskList tasks={state} delete={deleteTask} done={doneTask}/>
         </div>
     );
 }
