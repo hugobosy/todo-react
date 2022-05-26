@@ -21,7 +21,15 @@ function App() {
     }
 
     const doneTask = (id) => {
-        console.log('Done task App components')
+        const tasks = [...state];
+        tasks.forEach(task => {
+            if(task.id === id) {
+                task.active = false;
+                task.finishDate = new Date().getTime();
+            }
+        })
+
+        setState(tasks);
     }
 
     return (
