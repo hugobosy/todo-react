@@ -14,7 +14,10 @@ function App() {
     ])
 
     const deleteTask = (id) => {
-        console.log('Delete in App components')
+        const tasks = [...state];
+        const index = tasks.findIndex(task => task.id === id)
+        tasks.splice(index, 1);
+        setState(tasks)
     }
 
     const doneTask = (id) => {
