@@ -32,10 +32,25 @@ function App() {
         setState(tasks);
     }
 
+    const addTask = (text, date, important) => {
+        console.log('Obiekt dodany')
+        const task = {
+            id: state.length,
+            text,
+            date,
+            important,
+            active: true,
+            finishDate: null,
+        }
+
+        setState([...state, task])
+        return true;
+    }
+
     return (
         <div className="App">
             Todo App
-            <AddTask/>
+            <AddTask add={addTask}/>
             <TaskList tasks={state} delete={deleteTask} done={doneTask}/>
         </div>
     );
