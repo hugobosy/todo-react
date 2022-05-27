@@ -20,7 +20,7 @@ export const Task = props => {
                     <span>{props.text}</span>
                     &nbsp;
                     <strong>Data zakończenia: </strong>
-                    <span>{props.completedDate}</span>
+                    <span>{new Date(props.completedDate).toLocaleString()}</span>
                 </p>}
         </div>
     )
