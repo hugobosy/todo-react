@@ -2,10 +2,14 @@ import React, {useState} from "react";
 
 export const AddTask = () => {
 
+    const minDate = new Date().toISOString().slice(0, 10);
+    let maxDate = Number(minDate.slice(0,4)) + 1;
+    maxDate += "-12-31";
+
     const [state, setState] = useState({
         text: '',
         check: false,
-        date: "2022-05-27"
+        date: minDate,
     })
 
     return (
@@ -15,7 +19,7 @@ export const AddTask = () => {
             <label>Priorytet</label>
             <br/>
             <label>Do kiedy zrobić</label>
-            <input type="date" value={state.date} min="2022-05-27" max="2022-12-31"/>
+            <input type="date" value={state.date} min={minDate} max={maxDate}/>
             <button>Dodaj</button>
         </div>
     )
