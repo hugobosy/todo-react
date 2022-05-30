@@ -6,11 +6,12 @@ import {useState} from "react";
 function App() {
 
     const [state, setState] = useState([
-        {id: 0, text: 'Przejść wiedźmina', date: '2022-09-11', important: true, active: true, finishDate: null},
-        {id: 1, text: 'Przejść wiedźmina', date: '2022-01-14', important: false, active: true, finishDate: null},
-        {id: 2, text: 'Przejść wiedźmina', date: '2022-09-11', important: true, active: true, finishDate: null},
-        {id: 3, text: 'Przejść wiedźmina', date: '2022-04-11', important: false, active: true, finishDate: null},
-        {id: 4, text: 'Przejść wiedźmina', date: '2022-05-11', important: true, active: true, finishDate: null},
+        {id: 0, text: 'Nauczyć się reacta', date: '2022-09-11', important: true, active: true, finishDate: null},
+        {id: 1, text: 'Spakować manatki', date: '2022-01-14', important: false, active: true, finishDate: null},
+        {id: 2, text: 'Znaleźć pracę', date: '2022-09-11', important: true, active: true, finishDate: null},
+        {id: 3, text: 'Postawić dom', date: '2022-04-11', important: false, active: true, finishDate: null},
+        {id: 4, text: 'Sprzedać ziemię', date: '2022-05-11', important: true, active: true, finishDate: null},
+        {id: 5, text: 'Browary na weekend', date: '2022-05-11', important: true, active: true, finishDate: null},
     ])
 
     const deleteTask = (id) => {
